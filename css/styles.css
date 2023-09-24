@@ -18,6 +18,8 @@ html {
   --secondary-color: #2196f3;
   --secondary-text-color: #757575;
   --white-color: #fff;
+  --placeholder-color: #ffffff99;
+  --placeholder-border-color: #ffffff4d;
 }
 
 body {
@@ -352,6 +354,8 @@ button:focus {
   cursor: pointer;
 }
 
+/* Footer */
+
 .footer {
   background-color: var(--secondary-background-color);
   display: flex;
@@ -420,6 +424,60 @@ button:focus {
   font-weight: 400;
   line-height: 1.71;
 }
+
+.footer-mailing {
+  margin-left: 93px;
+}
+
+.footer-mailing .title {
+  color: var(--white-color);
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-align: left;
+
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}
+
+.mailing-form {
+  display: flex;
+  height: 50px;
+}
+
+.mailing-form .email-input {
+  margin-right: 12px;
+  width: 358px;
+
+  padding-left: 16px;
+
+  background-color: transparent;
+  border: 1px solid var(--placeholder-border-color);
+  border-radius: 4px;
+  color: var(--placeholder-color);
+  outline: none;
+}
+
+.email-input::placeholder {
+  color: var(--placeholder-color);
+}
+
+.mailing-form .submit-button {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  padding: 0;
+}
+
+.submit-button .icon-telegram {
+  margin-left: 10px;
+  fill: var(--white-color);
+}
+
+/* Portfolio */
 
 .nav-portfolio {
   display: flex;
@@ -538,6 +596,8 @@ button:focus {
   margin-top: 0;
 }
 
+/* Backdrop */
+
 .backdrop {
   background: rgba(0, 0, 0, 50%);
   height: 100%;
@@ -587,6 +647,169 @@ button:focus {
   right: 8px;
   top: 8px;
   width: 30px;
+}
+
+.backdrop-form {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+  width: 448px;
+
+  margin-top: 40px;
+}
+
+.backdrop-form .form-title {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  margin-bottom: 12px;
+}
+
+.backdrop-form .form-item {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+}
+
+.form-item .item-title {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  color: var(--secondary-text-color);
+
+  margin-bottom: 4px;
+}
+
+.form-item .input-container {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 12px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-container .item-input {
+  order: 2;
+  width: 100%;
+  height: 40px;
+
+  outline: none;
+  border: none;
+  margin-left: 12px;
+}
+
+.icon-form {
+  fill: var(--primary-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item-input:focus + svg.icon-form {
+  fill: var(--secondary-color);
+}
+
+.input-container:focus-within {
+  border-color: var(--secondary-color);
+}
+
+.form-item textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 10px;
+  resize: none;
+  padding: 12px 16px;
+  outline: none;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-item textarea:focus {
+  border-color: var(--secondary-color);
+}
+
+.form-item textarea::placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  color: #75757580;
+}
+
+.form-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 0px auto;
+
+  width: 200px;
+  height: 50px;
+  background: var(--secondary-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+
+  color: var(--white-color);
+
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-submit:hover {
+  background: var(--button-background-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.license a {
+  color: var(--secondary-color);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.checkbox-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.license {
+  margin-left: 8px;
+  line-height: 1.71;
+
+  color: var(--secondary-text-color);
+}
+
+.checkbox-input:checked + .icon-border {
+  border-radius: 2px;
+  fill: none;
+  border-color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  background-image: url(../images/icon-check.svg);
 }
 
 .modal-close:hover,
