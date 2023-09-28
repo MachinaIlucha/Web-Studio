@@ -1,0 +1,44 @@
+.todo {
+  margin-bottom: 94px;
+}
+
+.todo__list {
+  display: flex;
+}
+
+.todo__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.todo__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
+  margin-bottom: 50px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.todo__text-container {
+  align-items: center;
+  background-color: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  width: 370px;
+}
+
+.todo__text-container .todo__text {
+  color: getColor("white-color");
+  font-weight: 700;
+  text-align: center;
+
+  text-transform: uppercase;
+}

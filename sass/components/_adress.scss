@@ -1,0 +1,42 @@
+.header__address-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__address-item {
+  &:first-child {
+    margin-right: 30px;
+  }
+}
+
+.header__address-link {
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-align: left;
+
+  color: getColor("secondary-text-color");
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: getColor("secondary-color");
+  }
+}
+
+.header__nav-icon {
+  fill: getColor(secondary-text-color);
+  margin-right: 10px;
+
+  @include transition(fill);
+
+  .header__address-link:hover &,
+  .header__address-link:focus & {
+    fill: getColor("secondary-color");
+  }
+}

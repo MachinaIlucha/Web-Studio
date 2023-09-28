@@ -1,0 +1,7 @@
+@mixin transition(
+  $type: background-color,
+  $time: 250ms,
+  $animation-type: cubic-bezier(0.4, 0, 0.2, 1)
+) {
+  transition: $type $time $animation-type;
+}

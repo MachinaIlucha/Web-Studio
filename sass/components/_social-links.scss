@@ -1,0 +1,34 @@
+.social-links {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 16px;
+  margin-bottom: 30px;
+}
+
+.links-item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social-tumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  fill: getColor("social-icon-color");
+
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+
+  @include transition(fill);
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    fill: getColor("white-color");
+    background-color: getColor("secondary-color");
+  }
+}

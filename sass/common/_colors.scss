@@ -1,0 +1,18 @@
+$colors: (
+  "background-color": #f5f4fa,
+  "black-color": #000,
+  "button-background-color": #188ce8,
+  "primary-background-color": #f5f5f5,
+  "primary-text-color": #212121,
+  "secondary-background-color": #2f303a,
+  "secondary-color": #2196f3,
+  "secondary-text-color": #757575,
+  "white-color": #fff,
+  "placeholder-color": #ffffff99,
+  "placeholder-border-color": #ffffff4d,
+  "social-icon-color": #afb1b8,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}

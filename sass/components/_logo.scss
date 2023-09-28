@@ -1,0 +1,15 @@
+.logo {
+  color: getColor("black-color");
+  font-family: "Raleway", sans-serif;
+  font-size: 26px;
+  text-decoration: none;
+
+  .header__logo-text,
+  .footer__logo-text {
+    color: getColor("secondary-color");
+  }
+
+  &.footer__logo {
+    color: getColor("white-color");
+  }
+}

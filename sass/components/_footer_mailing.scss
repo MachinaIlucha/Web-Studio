@@ -1,0 +1,58 @@
+.footer__mailing {
+  margin-left: 93px;
+  padding-top: 12px;
+}
+
+.mailing__title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+
+  color: getColor("white-color");
+
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.mailing__form {
+  display: flex;
+  height: 50px;
+}
+
+.mailing__input {
+  width: 358px;
+  margin-right: 12px;
+  padding-left: 16px;
+
+  border: 1px solid getColor("placeholder-border-color");
+  border-radius: 4px;
+  background-color: transparent;
+  color: getColor("placeholder-color");
+  outline: none;
+
+  &::placeholder {
+    color: getColor("placeholder-color");
+  }
+}
+
+.mailing__button {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  padding: 0;
+
+  @include transition();
+
+  &:hover,
+  &:focus {
+    background-color: getColor("button-background-color");
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.mailing__icon {
+  margin-left: 10px;
+  fill: getColor("white-color");
+}

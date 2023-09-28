@@ -1,0 +1,51 @@
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.header__address-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.header__nav-item {
+  margin-right: 53px;
+}
+
+.header__nav-link {
+  color: getColor("primary-text-color");
+
+  display: block;
+  padding-bottom: 32px;
+  padding-top: 32px;
+
+  font-weight: 500;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: getColor("secondary-color");
+  }
+}
+
+.header__nav-link--current {
+  color: getColor("secondary-color");
+  position: relative;
+
+  &::before {
+    background-color: #2196f3;
+    border-radius: 2px;
+    bottom: 0;
+    content: "";
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}

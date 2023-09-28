@@ -1,0 +1,48 @@
+.clients__container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients__title {
+  font-size: 36px;
+  letter-spacing: 0.03em;
+  line-height: 42px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.clients__list {
+  display: flex;
+  justify-content: center;
+}
+
+.clients__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  margin-right: 30px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  @include transition();
+
+  &:hover,
+  &:focus {
+    border: 1px solid getColor("secondary-color");
+    color: getColor("secondary-color");
+    cursor: pointer;
+  }
+}
+
+.clients__icon {
+  fill: getColor("social-icon-color");
+
+  @include transition(fill);
+
+  .clients__item:hover &,
+  .clients__item:focus & {
+    fill: getColor("secondary-color");
+  }
+}
